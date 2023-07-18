@@ -1,0 +1,67 @@
+
+
+
+ion-content{
+
+  --background :linear-gradient(#9E9E9E, rgb(0, 0, 0));
+
+ 
+
+
+/* .border {
+  ion-item {
+    border-radius: 20px 0 20px 0;
+  }
+} */
+
+ ion-card-title{
+  margin-top: 40px;
+  $font-family-base: 'Nunito', sans-serif;
+  color: #DD9250;
+  filter: drop-shadow(2px 2px 1px black);
+  text-align: center;
+  height: 40px;
+
+
+
+ }
+ .box {
+ filter: drop-shadow(5px 5px 8px black);
+ }
+ 
+ ion-card-subtitle{
+   text-transform: initial;
+   filter: drop-shadow(2px 2px 2px black);
+   text-align: left;
+ }
+
+
+
+
+.bot {
+
+  height: 90px;
+  margin: 0 auto;
+  margin-top: .01px;
+  --border-radius: 20px 20px 20px 20px;
+}
+
+ion-item {
+  background-color: transparent;
+  --background: transparent;
+}
+
+
+
+.vitalsigns{
+  list-style: none;
+  justify-content: center;
+  text-align: justify;
+}
+
+.not-normal {
+  color: red;
+}
+
+
+}

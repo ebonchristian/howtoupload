@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Reports</ion-title>
+      <ion-buttons slot="end">
+        <ion-button color="primary" routerLink="/home">Back</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row class="vital">
+        <ion-col size="3" class="header-cell">Date</ion-col>
+        <ion-col size="2" class="header-cell">Time</ion-col>
+        <ion-col size="2" class="header-cell">Heart Rate</ion-col>
+        <ion-col size="2" class="header-cell">Blood Pressure</ion-col>
+        <ion-col size="2" class="header-cell">Oxygen Level</ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+      
+      <ion-row *ngFor="let report of reports; let i = index" class="rates" [class.not-normal]="!report.isNormal">
+        <ion-col size="3">{{ report.isNormal ? getCurrentDate() : getDate(report.date) }}</ion-col>
+        <ion-col size="2">{{ report.isNormal ? getCurrentTime() : getTime(report.date) }}</ion-col>
+        <ion-col size="2">{{ report.heartRate }} bpm</ion-col>
+        <ion-col size="2">{{ report.bloodPressure }} mmHg</ion-col>
+        <ion-col size="2">{{ report.oxygenLevel }}%</ion-col>
+        <ion-col size="1">
+          <ion-button size="small" fill="clear" (click)="deleteReport(i)">
+            <ion-icon class="delete" name="backspace"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-content>
